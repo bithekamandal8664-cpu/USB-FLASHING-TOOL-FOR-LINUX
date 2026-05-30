@@ -27,7 +27,7 @@ fgets(destination, sizeof(destination), stdin);
 destination[strlen(destination) - 1] = '\0';
 printf("how much block size you want (in M)?:-");
 scanf("%d", &speed);
-if (strstr(destination, "/dev/sda") != NULL) {
+if (strcmp(destination, "/dev/sda") == 0) {
 printf(" you cant target your main drive!");
 return 1;
 }
